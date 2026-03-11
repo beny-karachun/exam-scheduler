@@ -6,12 +6,15 @@ pydantic>=2.0,<3.0
 pydantic-settings>=2.0,<3.0
 alembic>=1.13
 
-# ─── Step 2: Math Engine (install now to avoid issues later) ───
+# ─── Step 2: Math Engine ───
 ortools>=9.9
 
-# ─── Step 3: API & AI (placeholders, uncomment in Step 3) ───
-# fastapi>=0.110
-# uvicorn[standard]>=0.27
-# google-genai>=1.0
+# ─── Step 3: API & AI ───
+fastapi>=0.115
+uvicorn[standard]>=0.27
+python-multipart>=0.0.7       # Required for UploadFile
+google-genai>=1.0             # Google GenAI SDK (Gemini)
+
+# ─── Step 4: Task Queue (wired later) ───
 # celery[redis]>=5.3
 # redis>=5.0

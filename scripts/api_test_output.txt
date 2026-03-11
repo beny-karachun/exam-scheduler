@@ -1,0 +1,22 @@
+=== API Endpoint Tests ===
+
+  [GET /api/courses] 200 [{"code":"BIO210","name":"Biochemistry Fundamentals","ownership_domain":"INTERNAL","duration_minutes":120,"fixed_start_time":null,"fixed_end_time":null,"id":3},{"code":"BIO302","name":"Molecular Biology 302","ownership_domain":"INTERNAL","duration_minutes":150,"fixed_start_time":null,"fixed_end_time":null,"id":2},{"code":"BIO330","name":"Cell Biology & Signal Transduction","ownership_domain":"INTERNAL","duration_minutes":120,"fixed_start_time":null,"fixed_end_time":null,"id":5},{"code":"BIO401",
+  [GET /api/rooms] 200 [{"name":"Biotech Auditorium A","exam_capacity":120,"id":1},{"name":"Lab Wing Lecture Hall","exam_capacity":80,"id":2},{"name":"Seminar Room B2","exam_capacity":40,"id":3},{"name":"Tutorial Room C3","exam_capacity":30,"id":4}]
+  [POST /validate-move (should PASS)] 200 {"is_valid":true,"conflict_reason":""}
+  [POST /validate-move (should FAIL - blackout)] 200 {"is_valid":false,"conflict_reason":"Student 'Yuval Avraham' has external exam MATH201 (2026-03-16 09:00:00 - 2026-03-16 12:00:00) with 45-min transit buffer. The proposed time overlaps this blackout window."}
+  [POST /validate-move (should FAIL - capacity)] 200 {"is_valid":false,"conflict_reason":"Room 'Tutorial Room C3' has capacity 30, but 67 students are enrolled."}
+  [POST /solve] 200 {"task_id":"dcb3c072-49ee-4029-a753-b3de5c5146b0","message":"Solver started. Poll /api/schedule/result/{task_id} for results."}
+  [POST /nlp-constraint (expect 503)] 503 {"detail":"Gemini API key not configured."}
+  [GET /docs] 200 
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+    <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
+    <title>Faculty Exam Scheduler - Swagger UI</title>
+    </head>
+    <body>
+    <div id="swagger-ui">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger
