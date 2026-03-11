@@ -1,0 +1,17 @@
+# ─── Step 1: Database & Schema ───
+sqlalchemy[asyncio]>=2.0,<2.1
+asyncpg>=0.29                 # PostgreSQL async driver (production)
+aiosqlite>=0.20               # SQLite async driver (dev / testing)
+pydantic>=2.0,<3.0
+pydantic-settings>=2.0,<3.0
+alembic>=1.13
+
+# ─── Step 2: Math Engine (install now to avoid issues later) ───
+ortools>=9.9
+
+# ─── Step 3: API & AI (placeholders, uncomment in Step 3) ───
+# fastapi>=0.110
+# uvicorn[standard]>=0.27
+# google-genai>=1.0
+# celery[redis]>=5.3
+# redis>=5.0

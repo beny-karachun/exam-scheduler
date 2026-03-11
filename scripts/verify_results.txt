@@ -1,0 +1,29 @@
+Tables: ['courses', 'students', 'rooms', 'enrollments', 'exam_events']
+  courses: 8 rows
+  students: 100 rows
+  rooms: 4 rows
+  enrollments: 369 rows
+  exam_events: 0 rows
+
+Students with >=1 external enrollment: 64
+Accommodated students: 3
+
+Courses:
+  ('BIO401', 'Genetics 401', 'INTERNAL', 180, None, None)
+  ('BIO302', 'Molecular Biology 302', 'INTERNAL', 150, None, None)
+  ('BIO210', 'Biochemistry Fundamentals', 'INTERNAL', 120, None, None)
+  ('BIO455', 'Bioinformatics & Genomics', 'INTERNAL', 150, None, None)
+  ('BIO330', 'Cell Biology & Signal Transduction', 'INTERNAL', 120, None, None)
+  ('MATH201', 'Calculus II', 'EXTERNAL', None, '2026-03-16 09:00:00.000000', '2026-03-16 12:00:00.000000')
+  ('PHYS101', 'Physics I – Mechanics', 'EXTERNAL', None, '2026-03-17 10:00:00.000000', '2026-03-17 13:00:00.000000')
+  ('CHEM220', 'Organic Chemistry', 'EXTERNAL', None, '2026-03-18 08:00:00.000000', '2026-03-18 11:00:00.000000')
+
+Enrollments per course:
+  BIO210     Biochemistry Fundamentals                55 students
+  BIO302     Molecular Biology 302                    58 students
+  BIO330     Cell Biology & Signal Transduction       45 students
+  BIO401     Genetics 401                             67 students
+  BIO455     Bioinformatics & Genomics                65 students
+  CHEM220    Organic Chemistry                        24 students
+  MATH201    Calculus II                              26 students
+  PHYS101    Physics I – Mechanics                    29 students
