@@ -25,7 +25,7 @@ class Settings(BaseSettings):
 
     # ── AI / Gemini (wired in Step 3) ─────────────────────────
     GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-2.5-pro"
+    GEMINI_MODEL: str = "gemini-3.1-pro-preview"
 
     # ── Celery / Redis (wired in Step 3) ──────────────────────
     CELERY_BROKER_URL: str = "redis://localhost:6379/0"
